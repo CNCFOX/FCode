@@ -1,0 +1,8 @@
+include ':app_wrapper',
+        ':module_main',
+        ':lib_common',
+        ':module_mine',
+        ':module_view',
+        ':module_media',
+        ':module_db',
+        ':module_webview'

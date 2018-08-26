@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FCode.iml" filepath="$PROJECT_DIR$/FCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app_wrapper/app.iml" filepath="$PROJECT_DIR$/app_wrapper/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_common/lib_common.iml" filepath="$PROJECT_DIR$/lib_common/lib_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_db/module_db.iml" filepath="$PROJECT_DIR$/module_db/module_db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_main/module_main.iml" filepath="$PROJECT_DIR$/module_main/module_main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_media/module_media.iml" filepath="$PROJECT_DIR$/module_media/module_media.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_mine/module_mine.iml" filepath="$PROJECT_DIR$/module_mine/module_mine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_view/module_view.iml" filepath="$PROJECT_DIR$/module_view/module_view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_webview/module_webview.iml" filepath="$PROJECT_DIR$/module_webview/module_webview.iml" />
+    </modules>
+  </component>
+</project>
