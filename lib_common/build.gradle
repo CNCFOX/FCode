@@ -11,6 +11,13 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        //Arouter路由配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+
     }
 
     buildTypes {
@@ -23,10 +30,12 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation              deps.supports.appcompat_v7
+    testImplementation          deps.supports.junit
+    androidTestImplementation   deps.supports.test_runner
+    androidTestImplementation   deps.supports.test_espresso_core
 
-    implementation 'com.android.support:appcompat-v7:26.0.0-beta1'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+    compile                     deps.supports.arouter_api
+    annotationProcessor         deps.supports.arouter_compiler
 }
