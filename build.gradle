@@ -1,11 +1,13 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 apply from: "config.gradle"
 buildscript {
-//    apply from: "versions.gradle"
-//    addPepos(repositories)
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        //Add the JitPack repository
+        maven { url "https://jitpack.io" }
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
@@ -17,10 +19,13 @@ buildscript {
 }
 
 allprojects {
-//    addPepos(repositories)
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        //Add the JitPack repository
+        maven { url "https://jitpack.io" }
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     }
 }
 
