@@ -1,14 +1,19 @@
 package com.cfox.module_main;
 
-import android.os.Bundle;
+import android.support.v4.app.Fragment;
 
-import com.cfox.lib_common.base.BaseActivity;
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.cfox.lib_common.arouter.RouterPath;
 
-public class MainActivity extends BaseActivity {
+import java.util.List;
 
+public class MainActivity extends ActivtyWrapper {
+
+    private Fragment mViewFg;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void initViews(List<Fragment> views) {
+        mViewFg = (Fragment) ARouter.getInstance().build(RouterPath.MAIN_VIEW_FG).navigation();
+        if (mViewFg != null) views.add(mViewFg);
     }
 }
+

@@ -5,10 +5,6 @@ import android.support.multidex.MultiDex;
 
 import com.cfox.lib_common.base.BaseApplication;
 
-/**
- * Created by Mr.Ma on 2018/8/27.
- */
-
 public class FCodeApplication extends BaseApplication {
 
     @Override

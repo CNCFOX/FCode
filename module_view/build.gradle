@@ -48,10 +48,13 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation deps.supports.appcompat_v7
-    implementation deps.supports.constraint_layout
-    testImplementation deps.supports.junit
-    androidTestImplementation deps.supports.test_runner
-    androidTestImplementation deps.supports.test_espresso_core
+    implementation              deps.supports.appcompat_v7
+    implementation              deps.supports.constraint_layout
+    testImplementation          deps.supports.junit
+    androidTestImplementation   deps.supports.test_runner
+    androidTestImplementation   deps.supports.test_espresso_core
+
+    compile                     deps.supports.arouter_api
+    annotationProcessor         deps.supports.arouter_compiler
     implementation project(':lib_common')
 }
