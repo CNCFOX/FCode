@@ -50,6 +50,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation              deps.supports.appcompat_v7
     implementation              deps.supports.constraint_layout
+    implementation              deps.supports.design
     testImplementation          deps.supports.junit
     androidTestImplementation   deps.supports.test_runner
     androidTestImplementation   deps.supports.test_espresso_core

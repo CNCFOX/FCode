@@ -9,27 +9,31 @@ import java.util.List;
 
 public class MainActivity extends ActivtyWrapper {
 
-    private Fragment mViewFg;
-    private Fragment mMineFg;
-    private Fragment mDbFg;
-    private Fragment mMediaFg;
-    private Fragment mWebviewFg;
     @Override
-    public void initViews(List<Fragment> views) {
-        mViewFg = (Fragment) ARouter.getInstance().build(RouterPath.MAIN_VIEW_FG).navigation();
-        if (mViewFg != null) views.add(mViewFg);
+    public void initPagerViews(List<PagerInfo> views) {
+        Fragment viewFg = (Fragment) ARouter.getInstance().build(RouterPath.MAIN_VIEW_FG).navigation();
+        if (viewFg != null) {
+            views.add(createPagerInfo(R.string.main_tab_view, R.mipmap.mine_tab_select, R.mipmap.mine_tab_unselect, viewFg));
+        }
 
-        mMineFg = (Fragment) ARouter.getInstance().build(RouterPath.MAIN_MINE_FG).navigation();
-        if (mMineFg != null) views.add(mMineFg);
+        Fragment dbFg = (Fragment) ARouter.getInstance().build(RouterPath.MAIN_DB_FG).navigation();
+        if (dbFg != null) {
+            views.add(createPagerInfo( R.string.main_tab_db, R.mipmap.mine_tab_select, R.mipmap.mine_tab_unselect, dbFg));
+        }
 
-        mDbFg = (Fragment) ARouter.getInstance().build(RouterPath.MAIN_DB_FG).navigation();
-        if (mDbFg != null) views.add(mDbFg);
+        Fragment mediaFg = (Fragment) ARouter.getInstance().build(RouterPath.MAIN_MEDIA_FG).navigation();
+        if (mediaFg != null) {
+            views.add(createPagerInfo( R.string.main_tab_media, R.mipmap.mine_tab_select, R.mipmap.mine_tab_unselect, mediaFg));
+        }
 
-        mMediaFg = (Fragment) ARouter.getInstance().build(RouterPath.MAIN_MEDIA_FG).navigation();
-        if (mMediaFg != null) views.add(mMediaFg);
-
-        mWebviewFg = (Fragment) ARouter.getInstance().build(RouterPath.MAIN_VEBVIEW_FG).navigation();
-        if (mWebviewFg != null) views.add(mWebviewFg);
+        Fragment webviewFg = (Fragment) ARouter.getInstance().build(RouterPath.MAIN_VEBVIEW_FG).navigation();
+        if (webviewFg != null) {
+            views.add(createPagerInfo(R.string.main_tab_webview, R.mipmap.mine_tab_select, R.mipmap.mine_tab_unselect, webviewFg));
+        }
+        Fragment mineFg = (Fragment) ARouter.getInstance().build(RouterPath.MAIN_MINE_FG).navigation();
+        if (mineFg != null) {
+            views.add(createPagerInfo(R.string.main_tab_mine, R.mipmap.mine_tab_select, R.mipmap.mine_tab_unselect, mineFg));
+        }
     }
 }
 
