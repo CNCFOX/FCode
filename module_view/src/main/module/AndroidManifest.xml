@@ -3,13 +3,14 @@
     package="com.cfox.module_view">
 
     <application
+        android:name="debug.ViewApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="debug.ModuleActivity">
+        <activity android:name="debug.ViewModuleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
