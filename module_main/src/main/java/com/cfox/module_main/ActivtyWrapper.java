@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 
 import com.cfox.lib_common.base.BaseActivity;
@@ -15,7 +14,6 @@ import java.util.List;
 
 
 public abstract class ActivtyWrapper extends BaseActivity {
-    private static final String TAG = "ActivtyWrapper";
     private ViewPager mViewPager;
     private TabLayout mTabLayout;
     private MainViewAdapter mAdapter;
@@ -36,7 +34,7 @@ public abstract class ActivtyWrapper extends BaseActivity {
     private void configView() {
         mAdapter = new MainViewAdapter(this,getSupportFragmentManager(), mViews);
         mViewPager.setAdapter(mAdapter);
-        setTabs(mTabLayout,mViews);
+        setTabs(mTabLayout);
     }
 
     private void initView() {
@@ -59,14 +57,11 @@ public abstract class ActivtyWrapper extends BaseActivity {
     }
 
 
-    private void setTabs(TabLayout tabLayout, List<PagerInfo> viewInfos) {
+    private void setTabs(TabLayout tabLayout) {
 
         int tabCount = tabLayout.getTabCount();
         for (int i = 0 ; i < tabCount; i ++) {
             TabLayout.Tab tab = tabLayout.getTabAt(i);
-//            PagerInfo pagerInfo = viewInfos.get(i);
-//            tab.setText(pagerInfo.getTitleRes());
-//            tab.setIcon(pagerInfo.getUnSelectImgRes());
             if (tab == null) return;
             tab.setCustomView(bindTabView(mViews.get(i)));
         }
@@ -93,6 +88,8 @@ public abstract class ActivtyWrapper extends BaseActivity {
 
     private View bindTabView(PagerInfo info) {
         TabView tabView = TabView.createTabView(this,R.layout.main_tab_item);
+        tabView.setTabTile(info.getTitleRes());
+        tabView.setIconStatus(info.getSelectImgRes(), info.getUnSelectImgRes());
         return tabView.build();
     }
 }
