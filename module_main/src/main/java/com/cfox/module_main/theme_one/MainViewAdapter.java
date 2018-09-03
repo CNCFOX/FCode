@@ -1,9 +1,11 @@
-package com.cfox.module_main;
+package com.cfox.module_main.theme_one;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import com.cfox.module_main.PagerInfo;
 
 import java.util.List;
 

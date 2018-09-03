@@ -76,4 +76,9 @@ public class TabView {
     public View build() {
         return mTabView;
     }
+
+    public View build(String viewTag) {
+        mTabView.setTag(viewTag);
+        return mTabView;
+    }
 }

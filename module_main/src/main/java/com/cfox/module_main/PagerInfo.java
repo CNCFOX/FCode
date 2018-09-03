@@ -4,10 +4,19 @@ package com.cfox.module_main;
 import android.support.v4.app.Fragment;
 
 public class PagerInfo {
+    private String mFlag;
     private int mTitleRes;
     private int mSelectImgRes;
     private int mUnSelectImgRes;
     private Fragment mPager;
+
+    public String getFlag() {
+        return mFlag;
+    }
+
+    public void setFlag(String mFlag) {
+        this.mFlag = mFlag;
+    }
 
     public int getTitleRes() {
         return mTitleRes;

@@ -1,4 +1,4 @@
-package com.cfox.module_main;
+package com.cfox.module_main.theme_one;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,9 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 
 import com.cfox.lib_common.base.BaseActivity;
+import com.cfox.module_main.PagerInfo;
+import com.cfox.module_main.R;
+import com.cfox.module_main.TabView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +28,7 @@ public abstract class ActivtyWrapper extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity);
+        setContentView(R.layout.main_one_activity);
         initPagerViews(mViews);
         initView();
         configView();
