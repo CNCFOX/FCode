@@ -27,6 +27,16 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            if (!Boolean.valueOf(deps.isModule)) {
+                java {
+                    exclude 'debug/**'
+                }
+            }
+        }
+    }
+
 }
 
 dependencies {
